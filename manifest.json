@@ -1,16 +1,17 @@
 {
     "manifest_version": 2,
-    "name": "Input Hopper",
-    "version": "1.0",
-    "description": "Adds red border to all webpages matching mozilla.org",
+    "name": "Hopper",
+    "version": "0.1.3",
+    "description": "Manage tabndex order of input fields",
     "icons": {
-        "48": "icons/border-48.png"
+        "48": "icons/hopper-icon.svg",
+        "96": "icons/hopper-icon.svg"
     },
     
     "sidebar_action": {
         "default_title": "Hopper",
         "default_panel": "sidebar.html",
-        "defaul_icon": "sidebar_icon.png"
+        "default_icon": "icons/hopper-icon.svg"
     },
 
     "content_scripts": [
