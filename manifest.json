@@ -6,6 +6,13 @@
     "icons": {
         "48": "icons/border-48.png"
     },
+    
+    "sidebar_action": {
+        "default_title": "Hopper",
+        "default_panel": "sidebar.html",
+        "defaul_icon": "sidebar_icon.png"
+    },
+
     "content_scripts": [
         {
             "matches": [
