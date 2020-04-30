@@ -13,7 +13,10 @@ inputs.forEach(function (input) {
   });
 });
 
-browser.runtime.onMessage.addListener(alertHello);
-function alertHello(message) {
-  console.log(message);
+browser.runtime.onMessage.addListener(updateTabs);
+function updateTabs(message) {
+  let targetInput = document.querySelector(`input[data-hopperid="${message.hopperId}"]`);
+  targetInput.setAttribute("tabindex", message.tabindex);
+  targetInput.style.backgroundColor = "lightgreen";
+  console.log(targetInput);
 }

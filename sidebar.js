@@ -11,10 +11,10 @@ function getTabIndex(message) {
     }
 }
 
-btnSave.addEventListener("click", sendMessage);
+btnSave.addEventListener("click", updateTabs);
 
-function sendMessage() {
+function updateTabs() {
     browser.tabs.query({ currentWindow: true, active: true }).then( tabs => {
-        browser.tabs.sendMessage(tabs[0].id, { hopperId: hopperId,tabindex: activeInput.value });
+        browser.tabs.sendMessage(tabs[0].id, { hopperId: hopperId, tabindex: activeInput.value });
     }).catch(errorData => console.log(errorData));
 }
